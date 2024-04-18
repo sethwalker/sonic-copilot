@@ -1,26 +1,32 @@
-# Sonic Pi code to create a four on the floor bass drum with slightly swung double tap high hat on the 2s and 4s
+# Sonic Pi code to create a house drums with electro funk bass groove
 # Minimum Sonic Pi version required: v2.0
 
-# This Sonic Pi script continually plays a simple bass drum beat with slightly swung double tap high hat
-# Four on the floor means we'll hear the bass drum on every count - four beats per measure
+use_bpm 120
 
-# Let's define the beat
-live_loop :bass_drum do
-  # The :bd_haus sample represents a bass drum sound
-  sample :bd_haus
-  # We'll sleep for 1 beat between drum hits
-  # This value can be adjusted for faster/slower tempos
+# This Sonic Pi script plays a house drum pattern over 12 bars 
+# along with an electro funk bass groove.
+
+# Let's define the house drums
+live_loop :drums do
+  # The :bd_tek sample represents a bass drum sound, :sn_dolf for snare
+  sample :bd_tek
+  sleep 0.5
+  sample :bd_tek
+  sleep 1
+  sample :sn_dolf
+  sleep 0.5
+end
+
+# Let's define the electro funk bass groove
+live_loop :bass_groove do
+  use_synth :prophet
+  play :e1, release: 0.6
+  sleep 0.75
+  play :g1, release: 0.5
+  sleep 0.25
+  play :a1, release: 0.8
+  sleep 0.5
+  play :b1, release: 0.5
   sleep 1
 end
 
-live_loop :high_hat, sync: :bass_drum do
-  # The :drum_cymbal_pedal sample represents a high hat sound
-  # Code to create a slightly swung double tap high hat effect on beats 2 and 4
-  sleep 1
-  sample :drum_cymbal_pedal
-  sleep 0.5
-  sample :drum_cymbal_pedal
-  sleep 0.5
-  sample :drum_cymbal_pedal
-  sleep 2
-end
