@@ -1,0 +1,13 @@
+# Run this within Sonic Pi
+# This must be valid Ruby code
+
+samples = Dir.glob("/Users/sethwalker/dev/rc/sonic-copilot/training/data/**/*").reject {|f| File.directory?(f) }
+
+# Randomly choose from files in the data folder
+# and run them inside a live_loop
+live_loop :run_files do
+  # Run a random file from the data folder
+  run_file samples.sample
+  sleep 1
+end
+
