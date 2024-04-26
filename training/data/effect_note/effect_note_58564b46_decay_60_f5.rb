@@ -1,0 +1,1 @@
+play :f5, decay: 60

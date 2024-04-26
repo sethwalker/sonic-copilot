@@ -1,0 +1,1 @@
+play :cb3, decay: 0.01

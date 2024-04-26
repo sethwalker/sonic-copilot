@@ -1,0 +1,1 @@
+play :gs5, attack: 0.5

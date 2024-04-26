@@ -1,0 +1,1 @@
+play :g3, attack: 1

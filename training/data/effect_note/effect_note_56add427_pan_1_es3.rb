@@ -1,0 +1,1 @@
+play :es3, pan: 1

@@ -1,0 +1,1 @@
+play :c5, attack: 80

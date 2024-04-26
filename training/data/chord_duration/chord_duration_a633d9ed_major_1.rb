@@ -1,0 +1,1 @@
+play chord(:es5, :major), sustain: 1

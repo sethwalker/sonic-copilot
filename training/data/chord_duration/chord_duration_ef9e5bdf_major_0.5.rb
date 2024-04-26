@@ -1,0 +1,1 @@
+play chord(:cb4, :major), sustain: 0.5

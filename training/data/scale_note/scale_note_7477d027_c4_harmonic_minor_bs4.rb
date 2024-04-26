@@ -1,0 +1,2 @@
+scale(:c4, :harmonic_minor)
+play :bs4

@@ -1,0 +1,1 @@
+play chord(:bs3, :dim), sustain: 2

@@ -1,0 +1,1 @@
+play chord(:f4, :major7), sustain: 2

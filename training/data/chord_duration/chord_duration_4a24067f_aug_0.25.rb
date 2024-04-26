@@ -1,0 +1,1 @@
+play chord(:gs3, :aug), sustain: 0.25

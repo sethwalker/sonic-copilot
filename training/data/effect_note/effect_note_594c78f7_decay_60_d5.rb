@@ -1,0 +1,1 @@
+play :d5, decay: 60

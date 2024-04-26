@@ -1,0 +1,1 @@
+play chord(:c4, :m7b5), sustain: 1

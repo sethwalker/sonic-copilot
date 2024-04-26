@@ -1,0 +1,1 @@
+play chord(:es4, :dim), sustain: 2

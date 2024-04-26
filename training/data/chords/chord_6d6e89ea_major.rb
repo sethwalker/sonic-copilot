@@ -1,0 +1,1 @@
+play chord(:es3, :major)

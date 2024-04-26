@@ -1,0 +1,1 @@
+play chord(:gs3, :major7), sustain: 2

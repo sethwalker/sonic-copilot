@@ -1,0 +1,1 @@
+play chord(:bs5, :dim), sustain: 0.25

@@ -1,0 +1,1 @@
+play chord(:ds3, :major), sustain: 0.25

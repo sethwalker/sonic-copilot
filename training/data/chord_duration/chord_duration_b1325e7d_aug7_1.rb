@@ -1,0 +1,1 @@
+play chord(:fb4, :aug7), sustain: 1

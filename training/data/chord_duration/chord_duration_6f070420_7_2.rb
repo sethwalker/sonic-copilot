@@ -1,0 +1,1 @@
+play chord(:fs3, :7), sustain: 2

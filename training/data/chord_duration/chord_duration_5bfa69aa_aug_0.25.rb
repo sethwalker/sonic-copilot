@@ -1,0 +1,1 @@
+play chord(:ab5, :aug), sustain: 0.25

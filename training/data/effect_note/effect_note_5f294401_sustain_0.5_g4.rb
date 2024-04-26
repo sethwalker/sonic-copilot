@@ -1,0 +1,1 @@
+play :g4, sustain: 0.5

@@ -1,0 +1,1 @@
+play :cs3, sustain: 0.5

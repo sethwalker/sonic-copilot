@@ -1,0 +1,1 @@
+play :gs3, sustain: 0

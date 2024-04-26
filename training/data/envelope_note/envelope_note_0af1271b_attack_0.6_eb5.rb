@@ -1,0 +1,1 @@
+play :eb5, attack: 0.6

@@ -1,0 +1,1 @@
+play chord(:c4, :major)

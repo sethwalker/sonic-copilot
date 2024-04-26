@@ -1,0 +1,1 @@
+play_pattern [1, 1, 1, 1]

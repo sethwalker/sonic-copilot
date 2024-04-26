@@ -1,0 +1,1 @@
+play chord(:cs4, :minor7), sustain: 1

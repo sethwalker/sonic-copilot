@@ -1,0 +1,1 @@
+play :g5, decay: 0.2

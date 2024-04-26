@@ -1,0 +1,1 @@
+play chord(:cs3, :major)

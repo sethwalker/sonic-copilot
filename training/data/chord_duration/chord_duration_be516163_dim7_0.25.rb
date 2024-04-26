@@ -1,0 +1,1 @@
+play chord(:gs4, :dim7), sustain: 0.25

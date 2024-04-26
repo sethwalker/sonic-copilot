@@ -1,0 +1,1 @@
+play :d4, decay: 1

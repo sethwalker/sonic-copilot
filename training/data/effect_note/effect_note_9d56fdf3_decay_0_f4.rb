@@ -1,0 +1,1 @@
+play :f4, decay: 0

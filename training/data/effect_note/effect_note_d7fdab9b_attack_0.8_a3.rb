@@ -1,0 +1,1 @@
+play :a3, attack: 0.8

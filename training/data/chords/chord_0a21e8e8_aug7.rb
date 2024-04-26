@@ -1,0 +1,1 @@
+play chord(:as3, :aug7)

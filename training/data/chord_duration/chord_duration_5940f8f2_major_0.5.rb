@@ -1,0 +1,1 @@
+play chord(:as3, :major), sustain: 0.5

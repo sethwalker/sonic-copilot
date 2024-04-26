@@ -1,0 +1,1 @@
+play chord(:eb5, :dim7), sustain: 1

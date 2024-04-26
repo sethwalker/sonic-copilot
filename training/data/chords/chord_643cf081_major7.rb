@@ -1,0 +1,1 @@
+play chord(:bs4, :major7)

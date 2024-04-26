@@ -1,0 +1,1 @@
+play :cs5, attack: 100

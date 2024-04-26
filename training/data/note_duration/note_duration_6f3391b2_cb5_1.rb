@@ -1,0 +1,1 @@
+play :cb5, sustain: 1

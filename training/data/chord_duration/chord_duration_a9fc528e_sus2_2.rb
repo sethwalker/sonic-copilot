@@ -1,0 +1,1 @@
+play chord(:b4, :sus2), sustain: 2

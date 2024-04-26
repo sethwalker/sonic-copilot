@@ -1,0 +1,1 @@
+play chord(:db3, :aug7), sustain: 2

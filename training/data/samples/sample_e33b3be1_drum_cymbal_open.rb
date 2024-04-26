@@ -1,0 +1,1 @@
+sample :drum_cymbal_open

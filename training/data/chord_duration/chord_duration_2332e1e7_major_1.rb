@@ -1,0 +1,1 @@
+play chord(:db5, :major), sustain: 1
