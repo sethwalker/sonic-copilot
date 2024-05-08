@@ -8,13 +8,20 @@ from transformers import EncodecModel, AutoProcessor
 
 import torch
 
-from perceiver_ar_pytorch import PerceiverAR
-from perceiver_ar_pytorch.autoregressive_wrapper import AutoregressiveWrapper
+#from perceiver_ar_pytorch import PerceiverAR
+#from perceiver_ar_pytorch.autoregressive_wrapper import AutoregressiveWrapper
+
+if torch.backends.mps.is_available():
+    print("MPS is available!")
+    device = torch.device("mps")
+else:
+    print("MPS is not available. Falling back to CPU.")
+    device = torch.device("cpu")
 
 
 # %%
 processor = AutoProcessor.from_pretrained(
-    "facebook/encodec_24khz", padding="max_length", max_length=24_000 * 20
+    "facebook/encodec_24khz", padding="max_length", max_length=24_000 * 20, device=device
 )
 
 files = glob.glob("**/*.wav", recursive=True)
@@ -38,7 +45,6 @@ audio_dataset = audio_dataset.cast_column(
 model_id = "facebook/encodec_24khz"
 audio_tokenizing_model = EncodecModel.from_pretrained(model_id)
 
-
 # %%
 def prepare_dataset(batch):
     audio = batch["audio"]
@@ -47,12 +53,12 @@ def prepare_dataset(batch):
         sampling_rate=processor.sampling_rate,
         return_tensors="pt",
     )
+    inputs['bandwidth'] = 6
 
     # Extract discrete codes from EnCodec
     with torch.no_grad():
-        encoded_frames = audio_tokenizing_model.encode(**inputs)
-    codes = torch.cat([encoded[0] for encoded in encoded_frames], dim=-1)  # [B, n_q, T]
-    batch["codes"] = codes
+        audio_codes = audio_tokenizing_model(**inputs).audio_codes
+    batch["codes"] = torch.cat([t for t in torch.tensor(audio_codes).squeeze(0).squeeze(0)])
     return batch
 
 

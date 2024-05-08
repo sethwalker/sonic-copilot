@@ -1,0 +1,4 @@
+datasets==2.19.1
+datasets[audio]
+transformers==4.40.2
+torch==2.3.0
